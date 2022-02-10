@@ -1,4 +1,3 @@
-import { entities } from '@infrastructure/database';
 import { generateKeyPairSync } from 'crypto';
 import { readFileSync, writeFileSync } from 'fs';
 import { join as createPath } from 'path';
@@ -45,7 +44,7 @@ export default () => ({
   mongodb: {
     uri: 'mongodb://cryptousr:cryptopwd@mongodb:27017/cryptogames',
   },
-  database: {
+  /*database: {
     autoLoadModels: true,
     synchronize: true,
     native: false,
@@ -58,7 +57,7 @@ export default () => ({
     models: entities,
     logging: false,
   },
-  /*cassandra: {
+  cassandra: {
     name: 'crypto-games',
     keepConnectionAlive: true,
     clientOptions: {

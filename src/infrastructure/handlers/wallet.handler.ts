@@ -2,7 +2,6 @@ import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 
-import { WalletEntity } from '@infrastructure/database';
 import { WalletCommand } from '@commands/wallet.command';
 import { WalletResponse } from '@valueObjects/wallet.response';
 import {
@@ -27,7 +26,7 @@ export class WalletHandler implements ICommandHandler<WalletCommand> {
 
   private async create(
     _filters: any,
-    data: Partial<WalletEntity>,
+    data: any,
   ): Promise<Readonly<WalletResponse>> {
     return new this.walletModel(data)
       .save()

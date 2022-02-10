@@ -31,7 +31,6 @@
     "@nestjs/mongoose": "^9.0.2",
     "@nestjs/passport": "^8.0.1",
     "@nestjs/platform-fastify": "^8.2.2",
-    "@nestjs/sequelize": "^8.0.0",
     "amqp-connection-manager": "^4.0.1",
     "amqplib": "^0.8.0",
     "crypto-js": "^4.1.1",
@@ -45,8 +44,6 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
-    "sequelize": "^6.12.5",
-    "sequelize-typescript": "^2.1.2",
     "ts-serializer": "^2.2.6"
   },
   "devDependencies": {
@@ -57,7 +54,6 @@
     "@types/jest": "27.0.2",
     "@types/node": "^16.0.0",
     "@types/passport-jwt": "^3.0.6",
-    "@types/sequelize": "^4.28.11",
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",

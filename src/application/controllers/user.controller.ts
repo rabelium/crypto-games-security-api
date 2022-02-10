@@ -2,7 +2,6 @@ import { CreateUserCommand } from '@commands/create-user.command';
 import { ListUsersCommand, UserTypes } from '@commands/list-users.command';
 import { ProfileCommand } from '@commands/profile.command';
 import { UpdateUserCommand } from '@commands/update-user.command';
-import { UserEntity } from '@infrastructure/database';
 import {
   Body,
   Controller,
@@ -60,7 +59,7 @@ export class UserController {
     @Param('kind') _kind: UserTypes,
     @Param('id') id: string,
     @Request() { user: { user } },
-    @Body() data: Partial<UserEntity>,
+    @Body() data: any,
   ) {
     return this.commandBus.execute(new UpdateUserCommand(id, user, data));
   }
@@ -70,7 +69,7 @@ export class UserController {
   async create(
     @Param('kind') _kind: UserTypes,
     @Request() { user: { user } },
-    @Body() data: Partial<UserEntity>,
+    @Body() data: any,
   ) {
     console.log('data', data);
     return this.commandBus.execute(new CreateUserCommand(user, data));

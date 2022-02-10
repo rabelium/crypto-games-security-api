@@ -1,5 +1,3 @@
-import { WalletEntity } from '@infrastructure/database';
-
 type WalletOperationsType =
   | 'list'
   | 'read'
@@ -14,6 +12,6 @@ export class WalletCommand {
   constructor(
     public readonly operation: WalletOperationsType,
     public readonly query: any,
-    public readonly data?: Partial<WalletEntity>,
+    public readonly data?: any,
   ) {}
 }
